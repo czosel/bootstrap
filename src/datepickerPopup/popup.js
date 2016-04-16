@@ -89,10 +89,7 @@ function($scope, $element, $attrs, $compile, $log, $parse, $window, $document, $
       timezone = ngModelOptions.timezone;
       $scope.ngModelOptions = angular.copy(ngModelOptions);
       $scope.ngModelOptions.timezone = null;
-      if ($scope.ngModelOptions.updateOnDefault === true) {
-        $scope.ngModelOptions.updateOn = $scope.ngModelOptions.updateOn ?
-          $scope.ngModelOptions.updateOn + ' default' : 'default';
-      }
+      $scope.ngModelOptions.updateOn = 'default';
 
       popupEl.attr('ng-model-options', 'ngModelOptions');
     } else {
